@@ -1,11 +1,30 @@
 import {JSX} from "react";
-import {ExampleStyled} from "./ExampleStyled";
+import {MyUserStyled} from "./MyUserStyled";
+import AvatarUser from "../AvatarUser/AvatarUser";
 
-export default function Example():JSX.Element {
+interface IMyUserProps {
+    colorBorder: string;
+    width: number;
+    height: number;
+    alt:string;
+    src:string;
+    userName:string
+}
+
+export default function MyUser({colorBorder, width, height, alt, src, userName}:IMyUserProps):JSX.Element {
 
     return (
-        <ExampleStyled>
-
-        </ExampleStyled>
+        <MyUserStyled>
+            <AvatarUser
+                colorBorder={colorBorder}
+                width={width}
+                height={height}
+                alt={alt}
+                src={src}
+            />
+            <div className="info-user-name">
+                {userName}
+            </div>
+        </MyUserStyled>
     );
 }

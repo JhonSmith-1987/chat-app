@@ -1,11 +1,19 @@
 import {JSX} from "react";
-import {ExampleStyled} from "./ExampleStyled";
+import {SearchStyled} from "./SearchStyled";
+import {FcSearch} from 'react-icons/fc';
 
-export default function Example():JSX.Element {
+export default function Search():JSX.Element {
 
     return (
-        <ExampleStyled>
-
-        </ExampleStyled>
+        <SearchStyled>
+            <div className="container-input">
+                <FcSearch className="icon-fc-search"/>
+                <input
+                    className="input-search-users"
+                    type="text"
+                    placeholder="Buscar contacto"
+                />
+            </div>
+        </SearchStyled>
     );
 }

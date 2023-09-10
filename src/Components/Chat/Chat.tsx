@@ -1,11 +1,18 @@
 import {JSX} from "react";
-import {ExampleStyled} from "./ExampleStyled";
+import {ChatStyled} from "./ChatStyled";
+import ChatMessage from "../ChatMessage/ChatMessage";
+import SendMessage from "../SendMessage/SendMessage";
+import SearchChat from "../SearchChat/SearchChat";
 
-export default function Example():JSX.Element {
+interface IChatProps {
+    isSearchVisible:boolean;
+}
+export default function Chat({isSearchVisible}:IChatProps):JSX.Element {
 
     return (
-        <ExampleStyled>
-
-        </ExampleStyled>
+        <ChatStyled>
+            <ChatMessage/>
+            <SearchChat isSearchVisible={isSearchVisible}/>
+        </ChatStyled>
     );
 }

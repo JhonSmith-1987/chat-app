@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
-export const ExampleStyled = styled.div`
+export const RegisterUserStyled = styled.div`
 
 `

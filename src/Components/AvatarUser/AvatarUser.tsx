@@ -1,11 +1,19 @@
 import {JSX} from "react";
-import {ExampleStyled} from "./ExampleStyled";
+import {AvatarUserStyled} from "./AvatarUserStyled";
 
-export default function Example():JSX.Element {
+interface IAvatarUserProps {
+    colorBorder: string;
+    width: number;
+    height: number;
+    alt:string;
+    src:string;
+}
+
+export default function AvatarUser({colorBorder, width, height, alt, src}: IAvatarUserProps): JSX.Element {
 
     return (
-        <ExampleStyled>
-
-        </ExampleStyled>
+        <AvatarUserStyled colorBorder={colorBorder} width={width} height={height}>
+            <img className="img-user" alt={alt} src={src}/>
+        </AvatarUserStyled>
     );
 }

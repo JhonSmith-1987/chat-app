@@ -1,11 +1,15 @@
 import {JSX} from "react";
-import {ExampleStyled} from "./ExampleStyled";
+import {SearchChatStyled} from "./SearchChatStyled";
+import Search from "../Search/Search";
 
-export default function Example():JSX.Element {
+interface ISearchChatProps {
+    isSearchVisible:boolean;
+}
+export default function SearchChat({isSearchVisible}:ISearchChatProps):JSX.Element {
 
     return (
-        <ExampleStyled>
-
-        </ExampleStyled>
+        <SearchChatStyled isSearchVisible={isSearchVisible}>
+            <Search/>
+        </SearchChatStyled>
     );
 }
